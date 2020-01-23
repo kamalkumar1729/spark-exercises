@@ -1,0 +1,62 @@
+
+1. session.read() => returns DataFrameReader()
+2. DataFrameReader().options() => return DataFrameReader()
+
+3. session.read() -> DataFrameReader
+   session.read().options() -> DataFrameReader
+
+
+3.1  These methods return DataFrameReader
+      .schema()
+      .option()
+      .options()
+      .format()
+
+
+3.2  load() ==> Generic method for reading data ;
+        method return dataSet on DataFrameReader
+      .load() -> DataSet<Row>
+
+    format() -> used for mentioning data format.
+        e.g format("csv").load() , format("jdbc").load()
+
+    ##### There are specialised methods for csv, parquet, orc, json etc. (see 3.3) #######
+
+    ############## load() is used with format(). ############
+
+
+
+3.3  These methods direct return dataSet<Row>
+    .csv()      -> DataSet
+    .json()     -> DataSet
+    .jdbc()     -> DataSet
+    .parquet()  -> DataSet
+    .orc()      -> DataSet
+    .text()     -> DataSet
+    .textFile() -> DataSet
+
+
+
+4. DataFrameReader => reads all data sources. specialised methods  :-
+   a) csv
+   b) json
+   c) jdbc
+   d) parquet
+   e) orc
+   f) text
+   g) textFile
+
+
+5. All data sources have few input options to set, to modify underlying data source
+  e.g. SV-specific options :
+         "header, inferSchema, enforceSchema , encoding etc.
+
+
+6. Without schema csv => all fields STRING()
+
+
+7. Encoders helps in :
+      JVM objects <=> Spark SQL internal representation.
+
+8.
+

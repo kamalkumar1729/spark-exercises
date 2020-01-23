@@ -1,0 +1,8 @@
+1. Global Views :-
+   Shared across sessions
+
+   New session from existing session can be created -
+   SparkSession session2 = session.newSession();
+
+2. Temp Views are session local.
+
