@@ -29,7 +29,7 @@
 
 
 3.3  These methods direct return dataSet<Row>
-
+  
     .csv()      -> DataSet
     .json()     -> DataSet
     .jdbc()     -> DataSet
@@ -40,14 +40,14 @@
 
 
 4. DataFrameReader => reads all data sources. specialised methods  :-
-
-   a) csv
-   b) json
-   c) jdbc
-   d) parquet
-   e) orc
-   f) text
-   g) textFile
+    
+    ``a) csv
+    b) json
+    c) jdbc
+    d) parquet
+    e) orc
+    f) text
+    g) textFile``
 
 
 5. All data sources have few input options to set, to modify underlying data source
@@ -61,6 +61,7 @@
 7. Encoders helps in :
       JVM objects <=> Spark SQL internal representation.
 
-8. Running SQL directly on data sources
-    session.sql("SELECT _c0 from csv.`C:\\Extras\\sparkdata\\transactions.csv`");
+8. Running SQL directly on data sources :
+
+    ```session.sql("SELECT _c0 from csv.`C:\\Extras\\sparkdata\\transactions.csv`");```
 
