@@ -8,6 +8,7 @@
 
 
 3.1  These methods return DataFrameReader
+
       .schema()
       .option()
       .options()
@@ -21,13 +22,14 @@
     format() -> used for mentioning data format.
         e.g format("csv").load() , format("jdbc").load()
 
-    ##### There are specialised methods for csv, parquet, orc, json etc. (see 3.3) #######
+    ## There are specialised methods for csv, parquet, orc, json etc. (see 3.3) ##
 
     ############## load() is used with format(). ############
 
 
 
 3.3  These methods direct return dataSet<Row>
+
     .csv()      -> DataSet
     .json()     -> DataSet
     .jdbc()     -> DataSet
@@ -37,8 +39,8 @@
     .textFile() -> DataSet
 
 
-
 4. DataFrameReader => reads all data sources. specialised methods  :-
+
    a) csv
    b) json
    c) jdbc
