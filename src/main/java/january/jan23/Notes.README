@@ -1,3 +1,4 @@
+# January 23rd Notes.
 
 1. session.read() => returns DataFrameReader()
 2. DataFrameReader().options() => return DataFrameReader()
@@ -58,5 +59,6 @@
 7. Encoders helps in :
       JVM objects <=> Spark SQL internal representation.
 
-8.
+8. Running SQL directly on data sources
+    session.sql("SELECT _c0 from csv.`C:\\Extras\\sparkdata\\transactions.csv`");
 

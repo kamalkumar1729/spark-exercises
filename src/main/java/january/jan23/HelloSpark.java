@@ -49,12 +49,20 @@ public class HelloSpark {
 
 
         /* direct load from data source */
+
+        final Dataset<Row> sql1 = session
+                .sql("SELECT _c0 from csv.`C:\\Extras\\sparkdata\\transactions.csv`");
+
+
+        sql1.show(100);
+
         final Dataset<Row> load = session
                 .read()
                 .format("csv")
-                .load("");
+                .option("header",true)
+                .load("C:\\Extras\\sparkdata\\transactions.csv");
 
-        load.show(100);
+        load.show(5);
 
         // sql.show(10);
 
